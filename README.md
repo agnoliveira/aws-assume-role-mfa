@@ -1,0 +1,1 @@
+# Automação segura de AssumeRole na AWS com MFA para acesso Same-Account e Cross-Account usando Bash e PowerShell.
