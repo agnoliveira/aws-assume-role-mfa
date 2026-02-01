@@ -170,7 +170,7 @@ Em IAM\Users, localize o usuário criado ***user_teste*** e edite, na aba ***sec
 > Identificador MFA (colocar somente do / em diante nao precisa do arn todo):  
 > Codigo MFA (6 digitos):
 
-#### ***Com esse processo, já podemos executar o AWS Cli ou usar o Terraform por exemplo***, caso queria abrir um tunel para se conectar a um RDS ou acessar uma EC2 que esteja em zona privada, siga abaixo os scripts:
+#### ***Com esse processo, já podemos executar o AWS CLI ou usar o Terraform por exemplo***, caso queria abrir um tunel para se conectar a um RDS ou acessar uma EC2 que esteja em zona privada, siga abaixo os scripts:
 
 #### Scripts/Windows/02-abrir_tunnel_RDS.bat
 
@@ -192,3 +192,14 @@ Em IAM\Users, localize o usuário criado ***user_teste*** e edite, na aba ***sec
 
 ### Linux  
 Segue os mesmos passos do windows, mudando somente do Powershell, pelo terminal
+
+---
+
+## Autor
+
+**Agnaldo Oliveira**  
+AWS Solutions Architect Associate (SAA-C03)
+
+https://www.linkedin.com/in/agnaldo--oliveira
+
+Projeto criado para documentar e compartilhar boas práticas de acesso seguro à AWS utilizando AssumeRole, MFA e Session Manager (SSM), com suporte a Same-Account e Cross-Account.
