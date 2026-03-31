@@ -124,11 +124,13 @@ aws sts get-caller-identity
 # INFORMACAO UTIL
 # ===============
 
-$EXPIRATION_LOCAL = [datetime]::ParseExact(
-    $Env:AWS_SESSION_EXPIRATION,
-    "dd/MM/yyyy HH:mm:ss",
-    [System.Globalization.CultureInfo]::GetCultureInfo("pt-BR")
+$EXPIRATION_UTC = [datetime]::Parse(
+    $CREDENTIALS_JSON.Credentials.Expiration,
+    [System.Globalization.CultureInfo]::InvariantCulture,
+    [System.Globalization.DateTimeStyles]::AssumeUniversal
 )
+
+$EXPIRATION_LOCAL = $EXPIRATION_UTC.ToLocalTime()
 
 Write-Host ""
 Write-Host "Credenciais expiram em: $($EXPIRATION_LOCAL.ToString('dd-MM-yyyy HH:mm:ss')) (UTC-3)"
